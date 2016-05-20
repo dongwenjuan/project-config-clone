@@ -510,7 +510,7 @@ providers:
     max-servers: 56
     rate: 0.001
     networks:
-      - name: inap-17304-WAN2342
+      - name: admin-floating-net
         public: true
     images:
       - name: ubuntu-trusty
