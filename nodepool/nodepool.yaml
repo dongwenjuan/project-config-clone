@@ -8,7 +8,7 @@ cron:
   image-update: '14 14 * * *'
 
 zmq-publishers:
-  - tcp://jenkins01.openstack.org:8888
+  - tcp://localhost:8888
 
 gearman-servers:
   - host: 127.0.0.1
