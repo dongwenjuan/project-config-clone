@@ -13,7 +13,7 @@ zmq-publishers:
   - tcp://jenkins03.openstack.org:8888
 
 gearman-servers:
-  - host: zuul.openstack.org
+  - host: 127.0.0.1
 
 labels:
   - name: ubuntu-trusty
