@@ -9,8 +9,6 @@ cron:
 
 zmq-publishers:
   - tcp://jenkins01.openstack.org:8888
-  - tcp://jenkins02.openstack.org:8888
-  - tcp://jenkins03.openstack.org:8888
 
 gearman-servers:
   - host: 127.0.0.1
@@ -33,7 +31,10 @@ labels:
 providers:
   - name: zte-RegionOne
     region-name: 'RegionOne'
-    cloud: zte
+    username: 'ciuser'
+    password: 'ciuser'
+    auth-url: 'http://172.10.0.11:5000/v2.0'
+    project-name: 'ciuser'
     api-timeout: 60
     boot-timeout: 120
     max-servers: 40
@@ -53,9 +54,7 @@ providers:
 
 targets:
   - name: jenkins01
-  - name: jenkins02
-  - name: jenkins03
-
+  
 diskimages:
   - name: ubuntu-trusty
     elements:
