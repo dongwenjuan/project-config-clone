@@ -39,7 +39,7 @@ providers:
     boot-timeout: 120
     max-servers: 40
     rate: 0.001
-    image-type: vhd
+    image-type: qcow2
     images:
       - name: ubuntu-trusty
         min-ram: 8192
@@ -48,9 +48,6 @@ providers:
         private-key: /home/nodepool/.ssh/id_rsa
         name-filter: 'Performance'
         config-drive: true
-        meta:
-          vm_mode: hvm
-          xenapi_use_agent: 'false'
 
 targets:
   - name: jenkins01
