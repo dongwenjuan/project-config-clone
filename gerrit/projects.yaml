@@ -37,3 +37,5 @@
   groups:
     - openstack-ci
   description: Configuration files for project CI systems
+- project: openstack/tempest
+  description: OpenStack Testing (Tempest) of an existing cloud
