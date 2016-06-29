@@ -30,3 +30,10 @@
   description: OpenStack Dashboard (Horizon)
   options:
     - translate    
+- project: openstack-dev/devstack
+  description: Set of scripts and utilities to quickly deploy an OpenStack cloud
+- project: openstack-infra/project-config
+  use-storyboard: true
+  groups:
+    - openstack-ci
+  description: Configuration files for project CI systems
