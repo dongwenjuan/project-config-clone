@@ -20,13 +20,13 @@ labels:
     min-ready: 1
     providers:
       - name: zte-RegionOne
-  - name: ubuntu-trusty-2-node
-    image: ubuntu-trusty
-    ready-script: multinode_setup.sh
-    subnodes: 1
-    min-ready: 1
-    providers:
-      - name: zte-RegionOne
+#  - name: ubuntu-trusty-2-node
+#    image: ubuntu-trusty
+#    ready-script: multinode_setup.sh
+#    subnodes: 1
+#    min-ready: 1
+#    providers:
+#      - name: zte-RegionOne
 
 providers:
   - name: zte-RegionOne
