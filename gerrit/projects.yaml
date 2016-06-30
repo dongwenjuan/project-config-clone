@@ -39,3 +39,13 @@
   description: Configuration files for project CI systems
 - project: openstack/tempest
   description: OpenStack Testing (Tempest) of an existing cloud
+- project: openstack-infra/zuul
+  use-storyboard: true
+  groups:
+    - openstack-ci
+  description: The Gatekeeper, or a project gating system
+- project: openstack-infra/gear
+  use-storyboard: true
+  groups:
+    - openstack-ci
+  description: Pure-Python asynchronous interface to Gearman
