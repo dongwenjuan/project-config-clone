@@ -33,7 +33,7 @@ providers:
     region-name: 'RegionOne'
     username: 'ciuser'
     password: 'ciuser'
-    auth-url: 'http://172.10.0.11:5000/v2.0'
+    auth-url: 'http://172.10.0.16:5000/v2.0'
     project-name: 'ciuser'
     api-timeout: 60
     boot-timeout: 120
