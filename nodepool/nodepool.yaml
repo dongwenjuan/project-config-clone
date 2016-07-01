@@ -41,7 +41,7 @@ providers:
     rate: 0.001
     image-type: qcow2
     networks:
-      - net-id: 63e065a0-3572-4a69-b536-d3c630e4003f
+      - net-id: 49d2a666-a9e3-4fbb-9bec-aa18498c1fb6
       - net-id: f1b99f3f-c3da-4ab2-8d5f-7b2dff393c53
         public: true
     images:
