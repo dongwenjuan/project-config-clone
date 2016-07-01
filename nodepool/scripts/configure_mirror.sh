@@ -51,10 +51,14 @@ LSBDISTID=$(lsb_release -is)
 LSBDISTCODENAME=$(lsb_release -cs)
 if [ "$LSBDISTID" == "Ubuntu" ] ; then
     sudo dd of=/etc/apt/sources.list <<EOF
-deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME main universe
-deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME-updates main universe
-deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME-backports main universe
-deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME-security main universe
+#deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME main universe
+#deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME-updates main universe
+#deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME-backports main universe
+#deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME-security main universe
+deb http://mirrors.zte.com.cn $LSBDISTCODENAME main universe
+deb http://mirrors.zte.com.cn $LSBDISTCODENAME-updates main universe
+deb http://mirrors.zte.com.cn $LSBDISTCODENAME-backports main universe
+deb http://mirrors.zte.com.cn $LSBDISTCODENAME-security main universe
 EOF
     if [ "$LSBDISTCODENAME" != 'precise' ] ; then
         # Turn off multi-arch
