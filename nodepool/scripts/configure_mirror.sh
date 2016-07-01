@@ -23,7 +23,7 @@ source /usr/local/jenkins/slave_scripts/afs-slug.sh
 
 # set DNS address for openstack env
 OPENSTACK_DNS=172.10.0.1
-echo "nameserver $OPENSTACK_DNS" >> /etc/resolv.conf
+sudo echo "nameserver $OPENSTACK_DNS" >> /etc/resolv.conf
 
 NODEPOOL_MIRROR_HOST=http://mirrors.zte.com.cn
 
