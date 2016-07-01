@@ -21,6 +21,7 @@ source /etc/nodepool/provider
 # Generate the AFS Slug from the host system.
 source /usr/local/jenkins/slave_scripts/afs-slug.sh
 
+NODEPOOL_MIRROR_HOST=http://mirrors.zte.com.cn
 NODEPOOL_MIRROR_HOST=${NODEPOOL_MIRROR_HOST:-mirror.$NODEPOOL_REGION.$NODEPOOL_CLOUD.openstack.org}
 NODEPOOL_MIRROR_HOST=$(echo $NODEPOOL_MIRROR_HOST|tr '[:upper:]' '[:lower:]')
 NODEPOOL_PYPI_MIRROR=${NODEPOOL_PYPI_MIRROR:-http://$NODEPOOL_MIRROR_HOST/pypi/simple}
@@ -51,14 +52,10 @@ LSBDISTID=$(lsb_release -is)
 LSBDISTCODENAME=$(lsb_release -cs)
 if [ "$LSBDISTID" == "Ubuntu" ] ; then
     sudo dd of=/etc/apt/sources.list <<EOF
-#deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME main universe
-#deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME-updates main universe
-#deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME-backports main universe
-#deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME-security main universe
-deb http://mirrors.zte.com.cn $LSBDISTCODENAME main universe
-deb http://mirrors.zte.com.cn $LSBDISTCODENAME-updates main universe
-deb http://mirrors.zte.com.cn $LSBDISTCODENAME-backports main universe
-deb http://mirrors.zte.com.cn $LSBDISTCODENAME-security main universe
+deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME main universe
+deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME-updates main universe
+deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME-backports main universe
+deb $NODEPOOL_UBUNTU_MIRROR $LSBDISTCODENAME-security main universe
 EOF
     if [ "$LSBDISTCODENAME" != 'precise' ] ; then
         # Turn off multi-arch
