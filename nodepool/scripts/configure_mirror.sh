@@ -33,7 +33,6 @@ timeout = 60
 index-url = $NODEPOOL_PYPI_MIRROR
 trusted-host = $NODEPOOL_MIRROR_HOST
 extra-index-url = $NODEPOOL_WHEEL_MIRROR
-proxy=http://127.0.0.1:8081
 EOF
 sudo mv /tmp/pip.conf /etc/pip.conf
 
@@ -41,7 +40,6 @@ cat >/home/jenkins/.pydistutils.cfg <<EOF
 [easy_install]
 index_url = $NODEPOOL_PYPI_MIRROR
 allow_hosts = *.openstack.org
-proxy=http://127.0.0.1:8081
 EOF
 
 # Double check that when the node is made ready it is able
