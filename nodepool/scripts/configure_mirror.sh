@@ -25,7 +25,7 @@ source /usr/local/jenkins/slave_scripts/afs-slug.sh
 OPENSTACK_DNS=172.10.0.1
 echo "nameserver $OPENSTACK_DNS" |sudo tee -a /etc/resolv.conf
 
-NODEPOOL_MIRROR_HOST=http://mirrors.zte.com.cn
+NODEPOOL_MIRROR_HOST=mirrors.zte.com.cn
 
 NODEPOOL_MIRROR_HOST=${NODEPOOL_MIRROR_HOST:-mirror.$NODEPOOL_REGION.$NODEPOOL_CLOUD.openstack.org}
 NODEPOOL_MIRROR_HOST=$(echo $NODEPOOL_MIRROR_HOST|tr '[:upper:]' '[:lower:]')
