@@ -50,6 +50,7 @@ EOF
 
 # Double check that when the node is made ready it is able
 # to resolve names against DNS.
+cat /etc/resolv.conf
 host git.openstack.org
 host $NODEPOOL_MIRROR_HOST
 
