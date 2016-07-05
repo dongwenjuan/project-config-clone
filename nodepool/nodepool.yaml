@@ -54,7 +54,7 @@ providers:
         # config-drive: true
 
 targets:
-  - name: jenkins01
+  - name: jenkins1
   
 diskimages:
   - name: ubuntu-trusty
