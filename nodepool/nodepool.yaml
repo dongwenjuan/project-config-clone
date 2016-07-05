@@ -17,7 +17,7 @@ labels:
   - name: ubuntu-trusty
     image: ubuntu-trusty
     ready-script: configure_mirror.sh
-    min-ready: 1
+    min-ready: 5
     providers:
       - name: zte-RegionOne
 #  - name: ubuntu-trusty-2-node
