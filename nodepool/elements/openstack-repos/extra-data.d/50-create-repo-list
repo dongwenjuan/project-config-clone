@@ -20,10 +20,10 @@ import os
 import urllib2
 import yaml
 
-URL = ('https://git.openstack.org/cgit/openstack-infra/project-config/'
-       'plain/gerrit/projects.yaml')
-# URL = ('https://raw.githubusercontent.com/dongwenjuan/project-config/master/'
-#       'gerrit/projects.yaml')
+#URL = ('https://git.openstack.org/cgit/openstack-infra/project-config/'
+#       'plain/gerrit/projects.yaml')
+URL = ('https://raw.githubusercontent.com/dongwenjuan/project-config/master/'
+       'gerrit/projects.yaml')
 
 TMP_HOOKS_PATH=os.environ['TMP_HOOKS_PATH']
 PROJECTS_REPOS=os.path.join(TMP_HOOKS_PATH, 'source-repository-projects-yaml')
