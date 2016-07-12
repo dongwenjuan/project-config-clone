@@ -17,7 +17,7 @@ labels:
   - name: ubuntu-trusty
     image: ubuntu-trusty
     ready-script: configure_mirror.sh
-    min-ready: 1
+    min-ready: 10
     providers:
       - name: zte-RegionOne
 #  - name: ubuntu-trusty-2-node
@@ -37,7 +37,7 @@ providers:
     project-name: 'ciuser'
     api-timeout: 60
     boot-timeout: 600
-    max-servers: 40
+    max-servers: 30
     rate: 0.001
     image-type: qcow2
     networks:
