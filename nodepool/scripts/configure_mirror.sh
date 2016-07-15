@@ -22,8 +22,10 @@ source /etc/nodepool/provider
 source /usr/local/jenkins/slave_scripts/afs-slug.sh
 
 # set DNS address for openstack env
-OPENSTACK_DNS=172.10.0.1
-echo "nameserver $OPENSTACK_DNS" |sudo tee -a /etc/resolv.conf
+OPENSTACK_DNS_1=172.10.0.1
+OPENSTACK_DNS_2=172.20.0.1
+echo "nameserver $OPENSTACK_DNS_1" |sudo tee -a /etc/resolv.conf
+echo "nameserver $OPENSTACK_DNS_2" |sudo tee -a /etc/resolv.conf
 
 NODEPOOL_MIRROR_HOST=mirrors.zte.com.cn
 
