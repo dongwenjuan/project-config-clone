@@ -30,15 +30,15 @@ labels:
 
 providers:
   - name: zte-RegionOne
-    cloud: zteclouds
-    #region-name: 'RegionOne'
-    #username: 'ciuser'
-    #password: 'ciuser'
-    #auth-url: 'http://172.10.0.17:5000/v2.0'
-    ## auth-url: 'http://172.20.0.12:5000/v2.0'
-    #project-name: 'ciuser'
+    # cloud: zteclouds
+    region-name: 'RegionOne'
+    username: 'ciuser'
+    password: 'ciuser'
+    auth-url: 'http://172.10.0.17:5000/v2.0'
+    # auth-url: 'http://172.20.0.12:5000/v2.0'
+    project-name: 'ciuser'
     api-timeout: 60
-    boot-timeout: 600
+    boot-timeout: 1500
     max-servers: 30
     rate: 0.001
     image-type: qcow2
