@@ -44,7 +44,9 @@ providers:
     image-type: qcow2
     networks:
       # 172.10.0.17 Internal Network
-      - net-id: 652b0857-37b3-463e-8957-4522e7a1e4e4
+      # - net-id: 652b0857-37b3-463e-8957-4522e7a1e4e4
+      # 172.20.0.12 Internal Network
+      - net-id: 63f01053-c21a-4874-b1bb-b0c27283aa7a
     images:
       - name: ubuntu-trusty
         min-ram: 8192
